@@ -1,0 +1,237 @@
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+}
+.head {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+.icon {
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 9px 6px 20px black;
+}
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.header {
+  background-color: var(--main-color);
+  height: 114px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 15px 30px;
+  display: block;
+}
+nav a:hover {
+  background-color: #dfdfdf;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #f6f6f6;
+  box-shadow: 0 2px 7px 0px gray;
+  z-index: 1;
+}
+nav .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+}
+
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.typewriter {
+  width: fit-content;
+}
+/* typeing animation */
+.typewriter h1 {
+  display: inline-block;
+  width: fit-content;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /* letter-spacing: .15em; Adjust as needed */
+  animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+.x a {
+  color: black;
+  text-decoration: none;
+  pointer-events: none;
+}
+.landing {
+  background-color: #f6f6f6;
+  height: calc(100vh - 50px - 114px);
+}
+.landing .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.button a {
+  text-decoration: none;
+}
+.first,
+.second {
+  padding: 15px 30px;
+  margin-right: 15px;
+}
+
+.first {
+  background-color: var(--main-color);
+  border: 2px solid var(--main-color);
+}
+.second {
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.first:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}
+.second:hover {
+  background-color: var(--main-color);
+  color: black;
+}
+nav .container a {
+  height: 100%;
+}
+
+.lesson-heading {
+  align-self: center;
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+}
+.content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 18px;
+  font-weight: 500;
+}
+hr {
+  align-self: center;
+  width: 80%;
+  border-color: var(--main-color);
+}
+.ol-heading {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.ol-heading + ol {
+  margin-top: 10px;
+}
+
+.comparison {
+  font-size: 16px;
+  display: flex;
+  border: 5px solid var(--main-color);
+  border-radius: 15px;
+  position: relative;
+}
+.comparison > div {
+  padding: 10px;
+}
+
+.comparison::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color);
+}
+.main-type-heading{
+  text-align: center;
+  padding: 20px;
+}
+table {
+  border: 3px solid var(--main-color);
+  border-collapse: collapse;
+  font-size: 16px;
+  margin: auto;
+}
+td {
+  padding: 5px;
+  border: 3px solid var(--main-color);
+}
+thead {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.dividing-ol {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+.dividing-ol ol {
+  max-width: 50%;
+}
+.dividing-ol ol li {
+  margin-bottom: 10px;
+}
