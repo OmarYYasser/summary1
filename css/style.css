@@ -208,6 +208,8 @@ hr {
 .main-type-heading{
   text-align: center;
   padding: 20px;
+  background-color: var(--main-color);
+  font-size: 50px;
 }
 table {
   border: 3px solid var(--main-color);
